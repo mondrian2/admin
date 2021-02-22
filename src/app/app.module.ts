@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardItemComponent } from './shared/card-item/card-item.component';
 
 const customDataServiceConfig: DefaultDataServiceConfig = { 
-  root: 'https://montebiancocursoonline.herokuapp.com/api',
+  root: environment.apiUrl,
   timeout: 15000, // request timeout 
 }
 
