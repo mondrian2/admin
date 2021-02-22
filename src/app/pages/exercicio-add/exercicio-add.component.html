@@ -1,0 +1,22 @@
+<app-top [type] = 2></app-top>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-5 offset-md-4">
+            <h1>Exercício-Add</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+
+            <form [formGroup]="form" (ngSubmit)="add()">
+                <div class="form-group">
+                    <label for="comandoinput">comando</label>
+                    <input type="text" class="form-control" formControlName="comando" name="comando" id="comandoinput"
+                        aria-describedby="emailHelp">
+                    <small id="comandolHelp" class="form-text text-muted">Ex: Básico I</small>
+                </div>
+                <button type="submit" class="btn btn-primary">enviar</button>
+            </form>
+        </div>
+    </div>
+</div>

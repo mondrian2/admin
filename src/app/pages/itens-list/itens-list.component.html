@@ -1,0 +1,33 @@
+<app-top [type] = 1></app-top>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-2 col-2  offset-md-3">
+            <a routerLink="/item-add">
+                <div class="btn bg-primary text-white ml-2">
+                    <span class="material-icons">add</span>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h1>Itens</h1>
+        </div>
+    </div>
+
+    <div class="row mt-2" *ngFor="let item of itens$ | async">
+        <div class="col-md-4 offset-md-3">
+            <app-card-item [item] = "item"></app-card-item>
+        </div>
+        <div class="col-md-4">
+            <a routerLink="/itens/{{item.id}}">
+                <div class="btn bg-primary text-white ml-2">
+                    <span class="material-icons">create</span>
+                </div>
+            </a>
+            <a (click) = "delete(item)">
+                <div class="btn bg-primary text-white ml-2">
+                    <span class="material-icons">clear</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
