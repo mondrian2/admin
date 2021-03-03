@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://montebiancocursoonline.herokuapp.com/api",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

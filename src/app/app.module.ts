@@ -19,10 +19,10 @@ import { TopComponent } from './shared/top/top.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardItemComponent } from './shared/card-item/card-item.component';
 
-const customDataServiceConfig: DefaultDataServiceConfig = { 
+const customDataServiceConfig: DefaultDataServiceConfig = {
   root: environment.apiUrl,
-  timeout: 15000, // request timeout 
-}
+  timeout: 15000
+};
 
 @NgModule({
   declarations: [
@@ -38,14 +38,14 @@ const customDataServiceConfig: DefaultDataServiceConfig = {
     CardItemComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
-    EntityDataModule.forRoot(entityConfig)    
+    EntityDataModule.forRoot(entityConfig)
   ],
   providers: [{ provide: DefaultDataServiceConfig, useValue: customDataServiceConfig }],
   bootstrap: [AppComponent]
