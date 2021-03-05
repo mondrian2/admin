@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'itens', component: ItensListComponent },
   { path: 'itens/:id', component: ItensEditComponent },
   { path: 'item-add', component: ItensAddComponent },
+  { path: '', component: ExercicioListComponent }
 ];
 
 @NgModule({
