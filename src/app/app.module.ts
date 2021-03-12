@@ -20,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardItemComponent } from './shared/card-item/card-item.component';
 
 const customDataServiceConfig: DefaultDataServiceConfig = {
-  root: environment.apiUrl,
+  root: 'https://montebiancocursoonline.herokuapp.com/api',
   timeout: 15000
 };
 
