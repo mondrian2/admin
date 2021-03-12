@@ -31,7 +31,7 @@ export function app(): express.Express {
   }));
 
   // setar o Proxy
-  const apiProxy = proxy('/api', { target: 'https://montebiancocursoonline.herokuapp.com/api' });
+  const apiProxy = proxy.createProxyMiddleware('/api', { target: 'https://montebiancocursoonline.herokuapp.com/api' });
   server.use('/api', apiProxy);
 
   // All regular routes use the Universal engine
